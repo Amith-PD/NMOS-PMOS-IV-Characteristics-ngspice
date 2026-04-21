@@ -49,11 +49,11 @@ This project demonstrates the simulation of **I–V characteristics of NMOS and 
 
 ## 🧮 Key Equation
 
-NMOS Current:
-Linear Region:
-I_D = k*[(Vgs-Vt)Vds-Vds^2/2]
-Saturation Region:
-I_D = k/2*(Vgs - Vt)^2
+* NMOS Current:
+* Linear Region:
+* I_D = k*[(Vgs-Vt)Vds-Vds^2/2]
+* Saturation Region:
+* I_D = k/2*(Vgs - Vt)^2
 
 
 ---
