@@ -1,0 +1,29 @@
+* PMOS I-V Characteristics
+
+* Supplies
+Vsd s 0 0
+Vsg g 0 0
+
+* PMOS transistor
+M1 d g s s PMOS W=10u L=1u
+
+* MODEL
+.model PMOS PMOS (LEVEL=1 VTO=-1 KP=50u LAMBDA=0.02)
+
+.control
+
+* -------- OUTPUT CHARACTERISTICS --------
+
+setplot new
+dc Vsd 0 5 0.1 Vsg 0 5 1
+plot -i(Vsd)
+
+* -------- TRANSFER CHARACTERISTICS --------
+
+setplot new
+dc Vsg 0 5 0.1 Vsd 5 5 1
+plot -i(Vsd)
+
+.endc
+
+.end

@@ -1,0 +1,29 @@
+* NMOS I-V Characteristics
+
+* Power supply
+Vds d 0 0
+Vgs g 0 0
+
+* NMOS transistor
+M1 d g 0 0 NMOS W=10u L=1u
+
+* MODEL (VERY IMPORTANT)
+.model NMOS NMOS (LEVEL=1 VTO=1 KP=100u LAMBDA=0.02)
+
+.control
+
+* -------- OUTPUT CHARACTERISTICS (Id vs Vds) --------
+
+setplot new
+dc Vds 0 5 0.1 Vgs 0 5 1
+plot -i(Vds)
+
+* -------- TRANSFER CHARACTERISTICS (Id vs Vgs) --------
+
+setplot new
+dc Vgs 0 5 0.1 Vds 5 5 1
+plot -i(Vds)
+
+.endc
+
+.end
