@@ -38,8 +38,6 @@ This project demonstrates the simulation of **I–V characteristics of NMOS and 
 * Output (Id vs Vds)
 * Transfer (Id vs Vgs)
 
-![NMOS Characteristics](results/nmos_output_transfer.png)
-
 ---
 
 ### 🔹 PMOS Characteristics
@@ -47,15 +45,16 @@ This project demonstrates the simulation of **I–V characteristics of NMOS and 
 * Output (Id vs Vsd)
 * Transfer (Id vs Vsg)
 
-![PMOS Characteristics](results/pmos_output_transfer.png)
-
 ---
 
 ## 🧮 Key Equation
 
-[
-I_D = \frac{k}{2}(V_{GS} - V_T)^2
-]
+NMOS Current:
+Linear Region:
+I_D = k*[(Vgs-Vt)Vds-Vds^2/2]
+Saturation Region:
+I_D = k/2*(Vgs - Vt)^2
+
 
 ---
 
